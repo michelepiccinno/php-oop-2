@@ -25,17 +25,17 @@ require_once __DIR__ . '/data.php';
 
       <div class="container">
         <div class="row">
-          <div class="col-3">
-            <? foreach ($prodotti as $item) { ?>
+          <? foreach ($prodotti as $item) { ?>
+            <div class="col-3">
               <div class="card">
-                <img src="<?= $item->image?>" alt="immagine del prodotto">
                 <h1><?= $item->name ?></h1>
+                <img src="<?= $item->image ?>" alt="immagine del prodotto">
                 <h3><?= $item->price ?></h3>
                 <h4><?= $item->description ?></h4>
-                <h5><?= $item->categories->categories ?></h5>
-              <? } ?>
+                <h5>CATEGORIA: <?= $item->categories->categories ?></h5>
               </div>
-          </div>
+            </div>
+          <? } ?>
         </div>
       </div>
 
