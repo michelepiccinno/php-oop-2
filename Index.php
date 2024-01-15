@@ -19,15 +19,30 @@ require_once __DIR__ . '/data.php';
 </head>
 
 <body>
-  <div id="app">
-    <main>
-      <section>
+  <main>
+    <section>
+      <? /*var_dump($prodotti) */ ?>
 
-<? var_dump($prodotti) ?>
+      <div class="container">
+        <div class="row">
+          <div class="col-2">
+            <? foreach ($prodotti as $item) { ?>
+              <div class="card">
+                <h1><?= $item->name ?></h1>
+                <h3><?= $item->price ?></h3>
+                <h4><?= $item->description ?></h4>
+                <h5><?= $item->categories->categories ?></h5>
+                <h6><?= $item->image ?></h6>
+              <? } ?>
+              </div>
+          </div>
+        </div>
+      </div>
 
-      </section>
-    </main>
-    <script src="js/main.js"></script>
-  </div>
+
+    </section>
+  </main>
+  <script src="js/main.js"></script>
 </body>
+
 </html>
