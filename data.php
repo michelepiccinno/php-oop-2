@@ -12,14 +12,14 @@ $prodotti = [
     ),
     new Product(
       'https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRqd0IlWV-PNxP08k3ibHa6SS4iUwZcXjtiUmhJ0_zEk6XRtnKyllEgZZaFfe_YSGkvIZbTAB2b26vFxQuBBOhOetunMxWRn4F-uGxIsZosVYIbgl1wm8nnik6-BVd20Rafo1Xl2_Zzaeo&usqp=CAc',
-      new Palla(),
+      new Cibo(),
       '18 €',
       'Crocchette al pollo 2kg',
       new Category('<i class="fa-solid fa-cat"></i>')
     ),
     new Product(
       'https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTUCt-OizO-SDkR86PMRink6EW0DyIHc-09gjeZzzXibBq-_WmZi3gH1S965gry-tShc8lrLBFqWtqpGMdhDaaY5Gy4LgQfKWJ45lBFrwsWyTSTO3ghlzdnzKnlURuFYVYKd3spfw&usqp=CAc',
-      new Cibo(),
+      new Palla(),
       '4 €',      
       'Palla rimbalzante',
       new Category('<i class="fa-solid fa-dog"></i>')
