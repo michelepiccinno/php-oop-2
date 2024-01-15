@@ -21,7 +21,7 @@ require_once __DIR__ . '/data.php';
 <body>
   <main>
     <section>
-      <? /*var_dump($prodotti) */ ?>
+      <? /*var_dump($prodotti) */?>
 
       <div class="container">
         <div class="row">
@@ -39,7 +39,7 @@ require_once __DIR__ . '/data.php';
         </div>
       </div>
 
-
+<? var_dump($utenti) ?>
     </section>
   </main>
   <script src="js/main.js"></script>
