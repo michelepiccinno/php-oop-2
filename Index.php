@@ -39,7 +39,6 @@ require_once __DIR__ . '/data.php';
         </div>
       </div>
 
-
     </section>
   </main>
   <script src="js/main.js"></script>
