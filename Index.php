@@ -27,8 +27,8 @@ require_once __DIR__ . '/data.php';
         <div class="row">
           <? foreach ($prodotti as $item) { ?>
             <div class="col-3">
-              <div class="card">
-                <h1><?= $item->name ?></h1>
+              <div class="card"> 
+                <h1><?= get_class($item->name) ?></h1>
                 <img src="<?= $item->image ?>" alt="immagine del prodotto">
                 <h3><?= $item->price ?></h3>
                 <h4><?= $item->description ?></h4>

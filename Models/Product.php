@@ -1,5 +1,6 @@
 <?php
 require_once __DIR__ . '/Categories.php';
+require_once __DIR__ . '/Name.php';
 class Product 
 {    
     public $image;
@@ -19,5 +20,7 @@ class Product
       $this->categories = $categories;
     }
 }
+
+
 
 ?>
