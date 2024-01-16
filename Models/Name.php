@@ -1,17 +1,38 @@
 <?php
 
-class Palla
-{
-  public $name;
+require_once __DIR__ . '/Product.php';
 
+class Palla extends Product
+{
+  public $color;
+
+  public function __construct($image, $name, $price, $description, Category $category, $color)
+  {
+    parent::__construct($image, $name, $price, $description, $category);
+    $this->color = $color;
+  }
 }
 
-class Cuccia
+
+class Cuccia extends Product
 {
-  public $name;
+  public $material;
+
+  public function __construct($image, $name, $price, $description, Category $category, $material)
+  {
+    parent::__construct($image, $name, $price, $description, $category);
+    $this->material = $material;
+  }
 }
 
-class Cibo
+
+class Cibo extends Product
 {
-  public $name;
+  public $ingredient;
+  
+  public function __construct($image, $name, $price, $description, Category $category, $ingredient)
+  {
+    parent::__construct($image, $name, $price, $description, $category);
+    $this->ingredient = $ingredient;
+  }
 }

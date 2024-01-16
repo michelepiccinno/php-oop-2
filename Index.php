@@ -23,23 +23,37 @@ require_once __DIR__ . '/data.php';
     <section>
       <? /*var_dump($prodotti) */?>
 
-      <div class="container">
+      <div class="container mt-5">
         <div class="row">
-          <? foreach ($prodotti as $item) { ?>
+          <?php foreach ($prodotti as $item) : ?>
             <div class="col-3">
               <div class="card"> 
-                <h1><?= get_class($item->name) ?></h1>
+                <h1><?= get_class($item) ?></h1>
                 <img src="<?= $item->image ?>" alt="immagine del prodotto">
                 <h3><?= $item->price ?></h3>
                 <h4><?= $item->description ?></h4>
-                <h5>CATEGORIA: <?= $item->categories->categories ?></h5>
+                <h5>CATEGORIA: <?= $item->category->category ?></h5>
+                DETTAGLI PRODOTTO:
+                <?php    
+                  switch (true) {
+                    case $item instanceof Palla:
+                      echo $item->color;
+                      break;
+                    case $item instanceof Cibo:
+                      echo $item->ingredient;
+                      break;
+                    case $item instanceof Cuccia:
+                      echo $item->material;
+                      break;
+                  }
+                ?>
               </div>
             </div>
-          <? } ?>
+          <?php endforeach; ?>
         </div>
       </div>
 
-<? var_dump($utenti) ?>
+<?/* var_dump($utenti) */?>
     </section>
   </main>
   <script src="js/main.js"></script>
