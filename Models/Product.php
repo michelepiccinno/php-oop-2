@@ -1,5 +1,5 @@
 <?php
-class Product 
+class Product
 {    
     public $image;
     protected $price;
@@ -9,7 +9,7 @@ class Product
     public function __construct($image, $price, $description, Category $category)
     {      
       $this->image = $image;  
-      $this->price = $price;
+      $this->price;
       $this->description = $description;
       $this->category = $category;
     }

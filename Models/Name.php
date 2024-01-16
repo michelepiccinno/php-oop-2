@@ -1,10 +1,11 @@
 <?php
 
 require_once __DIR__ . '/Product.php';
+require_once __DIR__ . '/Color.php';
 
 class Palla extends Product
 {
-  public $color;
+  use Color;
 
   public function __construct($image, $price, $description, Category $category, $color)
   {

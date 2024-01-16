@@ -27,7 +27,7 @@ $prodotti = [
       'Palla rimbalzante',
       '4 €',
       $dog,
-      "colore rosso"
+      ""
     )
     ];
 
@@ -44,6 +44,11 @@ $utenti = [
       'mariorossi@mail.it'
     ),
     ];
+
+
+if ($prodotti[2] instanceof Palla) {
+    $prodotti[2]->color = 'green';
+}
 
 ?>
 
