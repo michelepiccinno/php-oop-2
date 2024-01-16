@@ -7,10 +7,9 @@ class Palla extends Product
 {
   use Color;
 
-  public function __construct($image, $price, $description, Category $category, $color)
+  public function __construct($image, $price, $description, Category $category)
   {
     parent::__construct($image, $price, $description, $category);
-    $this->color = $color;
   }
 }
 

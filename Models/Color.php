@@ -3,9 +3,9 @@ trait Color
 {
   public $color;
 
-  public function getColor() 
+  public function setColor($color) 
   {
-    $color = '';
+    $this->color = $color;
     return $color;
   }
 }

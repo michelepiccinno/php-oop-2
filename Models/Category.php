@@ -3,7 +3,6 @@
 class Category
 {
     public $category;
-
     
     public function __construct($category)
     {

@@ -47,7 +47,7 @@ $utenti = [
 
 
 if ($prodotti[2] instanceof Palla) {
-    $prodotti[2]->color = 'green';
+    $prodotti[2]->color = '(by TrAiT) green';
 }
 
 ?>
