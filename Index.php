@@ -30,7 +30,7 @@ require_once __DIR__ . '/data.php';
               <div class="card"> 
                 <h1><?= get_class($item) ?></h1>
                 <img src="<?= $item->image ?>" alt="immagine del prodotto">
-                <h3><?= $item->price ?></h3>
+                <h3><?= $item->getPrice() ?></h3>
                 <h4><?= $item->description ?></h4>
                 <h5>CATEGORIA: <?= $item->category->category ?></h5>
                 DETTAGLI PRODOTTO:
