@@ -1,7 +1,7 @@
 <?php
 trait Color
 {
-  public $color;
+  public  $color;
 
   public function setColor($color) 
   {

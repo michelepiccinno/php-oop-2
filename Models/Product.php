@@ -2,15 +2,15 @@
 class Product
 {    
     public $image;
+    public $description; 
     protected $price;
-    public $description;
     public Category $category;
 
-    public function __construct($image, $price, $description, Category $category)
+    public function __construct($image, $description, $price, Category $category)
     {      
       $this->image = $image;  
-      $this->price;
-      $this->description = $description;
+      $this->description = $description;  
+      $this->price = $price;
       $this->category = $category;
     }
 

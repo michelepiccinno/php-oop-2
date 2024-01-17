@@ -21,31 +21,39 @@ require_once __DIR__ . '/data.php';
 <body>
   <main>
     <section>
-      <? /*var_dump($prodotti) */?>
+      <? /*var_dump($prodotti) */ ?>
 
       <div class="container mt-5">
         <div class="row">
           <?php foreach ($prodotti as $item) : ?>
             <div class="col-3">
-              <div class="card"> 
+              <div class="card">
                 <h1><?= get_class($item) ?></h1>
                 <img src="<?= $item->image ?>" alt="immagine del prodotto">
-                <h3><?= $item->getPrice() ?></h3>
+                <h3>
+                  <?php
+                  $discount = 0;
+                  if ($utenti[0]->registeredUser == true) {
+                    $discount = 20;
+                  }
+                  echo $item->getPrice() - ( ($item->getPrice() * $discount) / 100) . '€ Sconto utente registrato!';
+                  ?>
+                </h3>
                 <h4><?= $item->description ?></h4>
                 <h5>CATEGORIA: <?= $item->category->category ?></h5>
                 DETTAGLI PRODOTTO:
-                <?php    
-                  switch (true) {
-                    case $item instanceof Palla:
-                      echo $item->color;
-                      break;
-                    case $item instanceof Cibo:
-                      echo $item->ingredient;
-                      break;
-                    case $item instanceof Cuccia:
-                      echo $item->material;
-                      break;
-                  }
+                <?php
+                switch (true) {
+                  case $item instanceof Palla:
+                    echo $item->color;
+                    break;
+                  case $item instanceof Cibo:
+                    echo $item->ingredient;
+                    break;
+                  case $item instanceof Cuccia:
+                    echo $item->material;
+                    break;
+                }
                 ?>
               </div>
             </div>
@@ -53,7 +61,7 @@ require_once __DIR__ . '/data.php';
         </div>
       </div>
 
-<?/* var_dump($utenti) */?>
+      <?/* var_dump($utenti) */ ?>
     </section>
   </main>
   <script src="js/main.js"></script>
