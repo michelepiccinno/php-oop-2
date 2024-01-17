@@ -27,12 +27,13 @@ $prodotti = [
       'Palla rimbalzante',
       4,
       $dog,
+      'Blue'
     )
     ];
 
 
 $utenti = [
-    /*new User(
+  /*  new User(
       'Mario',
       'Rossi',
       'mariorossi@mail.it'
@@ -43,11 +44,6 @@ $utenti = [
       'mariorossi@mail.it'
     ),
     ];
-
-
-if ($prodotti[2] instanceof Palla) {
-    $prodotti[2]->color = '(by TrAiT) green';
-}
 
 ?>
 
